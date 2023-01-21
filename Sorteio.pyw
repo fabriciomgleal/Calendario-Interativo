@@ -3,7 +3,7 @@ import calendar
 import datetime
 import pandas
 
-sorteios = pandas.read_excel('C:/Users/Fabrício/Documents/GitHub/Calendario-Interativo/Teste XLSX Sorteios.xlsx', sheet_name='Planilha1')
+sorteios = pandas.read_excel('C:/Users/Fabrício/Documents/GitHub/Calendario-Interativo/Calendario-Interativo/Teste XLSX Sorteios.xlsx', sheet_name='Planilha1')
 
 produtos_primeira_quarta_todos = sorteios.loc[sorteios['Data']==('Primeira Quarta')]
 
