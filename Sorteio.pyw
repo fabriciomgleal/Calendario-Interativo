@@ -56,12 +56,12 @@ while True:
         mes = data.split('/')[1]
         if data in primeira_quarta:
             if mes in ('1','2','3','4','6','7','8','9','10'):
-                sg.popup(dia, produtos_primeira_quarta_todos[['Nome','Modalidade','Maximo de Sorteio']], title='Produtos primeira quarta')
+                sg.popup(dia, produtos_primeira_quarta_todos[['Nome','Modalidade','Maximo de Sorteio']].to_string(index=False), title='Produtos primeira quarta')
             elif mes in ('5','11'):
-                sg.popup(dia, produtos_primeira_quarta_todos[['Nome','Modalidade','Maximo de Sorteio']], produtos_primeira_quarta_mai_nov[['Nome','Modalidade','Maximo de Sorteio']], title='Produtos primeira quarta')
+                sg.popup(dia, produtos_primeira_quarta_todos[['Nome','Modalidade','Maximo de Sorteio']].to_string(index=False), produtos_primeira_quarta_mai_nov[['Nome','Modalidade','Maximo de Sorteio']].to_string(index=False), title='Produtos primeira quarta')
             elif mes in ('12'):
-                sg.popup(dia, produtos_primeira_quarta_todos[['Nome','Modalidade','Maximo de Sorteio']], produtos_primeira_quarta_dez[['Nome','Modalidade','Maximo de Sorteio']], title='Produtos primeira quarta')
+                sg.popup(dia, produtos_primeira_quarta_todos[['Nome','Modalidade','Maximo de Sorteio']].to_string(index=False), produtos_primeira_quarta_dez[['Nome','Modalidade','Maximo de Sorteio']].to_string(index=False), title='Produtos primeira quarta')
         elif data in primeiro_sabado:
-            sg.popup(dia, produtos_primeiro_sabado_todos[['Nome','Modalidade','Maximo de Sorteio']], title='Produtos primeiro sabado')
+            sg.popup(dia, produtos_primeiro_sabado_todos[['Nome','Modalidade','Maximo de Sorteio']].to_string(index=False), title='Produtos primeiro sabado')
         else:
             sg.popup('Selecione outra data.')    
