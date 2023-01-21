@@ -2,16 +2,21 @@ import PySimpleGUI as sg
 import calendar
 import datetime
 import pandas
+from babel.numbers import format_currency
 
 sorteios = pandas.read_excel('C:/Users/Fabrício/Documents/GitHub/Calendario-Interativo/Calendario-Interativo/Teste XLSX Sorteios.xlsx', sheet_name='Planilha1')
 
 produtos_primeira_quarta_todos = sorteios.loc[sorteios['Data']==('Primeira Quarta')]
+produtos_primeira_quarta_todos['Maximo de Sorteio'] = produtos_primeira_quarta_todos['Maximo de Sorteio'].apply(lambda x: format_currency(x, currency="BRL", locale="pt_BR"))
 
 produtos_primeira_quarta_mai_nov = sorteios.loc[sorteios['Data']==('Primeira Quarta Mai Nov')]
+produtos_primeira_quarta_mai_nov['Maximo de Sorteio'] = produtos_primeira_quarta_mai_nov['Maximo de Sorteio'].apply(lambda x: format_currency(x, currency="BRL", locale="pt_BR"))
 
 produtos_primeira_quarta_dez = sorteios.loc[sorteios['Data']==('Primeira Quarta Dez')]
+produtos_primeira_quarta_dez['Maximo de Sorteio'] = produtos_primeira_quarta_dez['Maximo de Sorteio'].apply(lambda x: format_currency(x, currency="BRL", locale="pt_BR"))
 
 produtos_primeiro_sabado_todos = sorteios.loc[sorteios['Data']==('Primeiro Sabado')]
+produtos_primeiro_sabado_todos['Maximo de Sorteio'] = produtos_primeiro_sabado_todos['Maximo de Sorteio'].apply(lambda x: format_currency(x, currency="BRL", locale="pt_BR"))
 
 primeira_quarta = []
 for month in range (1,13):
